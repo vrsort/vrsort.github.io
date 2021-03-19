@@ -1482,20 +1482,16 @@
 
 
          $(".sort_by_option").click(function() {
-             var sort_option_name = $(this).data("sort");
-             var sort_option_dir = $(this).data("sortdir");
-
-             $(this).parent().removeClass("visible");
-
-             $("#active_sort_name").text($(this).text());
-
-             global_sort = sort_option_name;
-             global_sortDir = sort_option_dir;
+             global_sort = $(this).data("sort");
+             global_sortDir = $(this).data("sortdir");
              global_sortName = $(this).text();
 
+             $(this).parent().removeClass("visible");
+             $("#active_sort_name").text($(this).text());
+
              $("#app_list").children().sortDomElements(function(a, b) {
-                 akey = sortDir * $(a).data(sort);
-                 bkey = sortDir * $(b).data(sort);
+                 akey = global_sortDir * $(a).data(global_sort);
+                 bkey = global_sortDir * $(b).data(global_sort);
                  if (akey == bkey) return 0;
                  if (akey < bkey) return -1;
                  if (akey > bkey) return 1;
