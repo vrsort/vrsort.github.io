@@ -807,7 +807,7 @@
              }
 
              #side_bar.visible {
-                 right: 0;
+                 transform: translateX(-278px);
              }
 
              #side_bar_mobile_open.visible {
@@ -848,18 +848,31 @@
                  flex-grow: 0;
              }
 
+             #search input[type="text"] {
+                 width: 100%;
+             }
+
              #sorting {
                  width: 50%;
+                 margin-left: 12px;
              }
 
              #sort_by {
                  width: 100%;
+                 margin: 0;
              }
 
              #side_bar_mobile_open {
                  display: block;
              }
 
+             .cover_parent {
+                 width: 100px;
+             }
+
+             .app_name {
+                 line-height: 110%;
+             }
          }
 
      </style>
