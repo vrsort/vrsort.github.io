@@ -1006,6 +1006,25 @@
                      <div class="add_remove" data-filtername="Single User"><div class="add"></div><div class="name_n_size"><div class="name">Single User</div><div class="size">69</div></div><div class="remove"></div></div><div class="add_remove" data-filtername="Multiplayer"><div class="add"></div><div class="name_n_size"><div class="name">Multiplayer</div><div class="size">21</div></div><div class="remove"></div></div><div class="add_remove" data-filtername="Co-op"><div class="add"></div><div class="name_n_size"><div class="name">Co-op</div><div class="size">12</div></div><div class="remove"></div></div>
                  </div>
              </div>
+             <div class="filter" id="filter_rating">
+                 <div class="filter_name">Rating</div>
+                 <div class="radio_option active" data-value="All">
+                     <div class="radio"></div>
+                     <div class="radio_name">All</div>
+                 </div>
+                 <div class="radio_option" data-value="5">
+                     <div class="radio"></div>
+                     <div class="radio_name">5</div>
+                 </div>
+                 <div class="radio_option" data-value="4">
+                     <div class="radio"></div>
+                     <div class="radio_name">≥ 4</div>
+                 </div>
+                 <div class="radio_option" data-value="3">
+                     <div class="radio"></div>
+                     <div class="radio_name">≥ 3</div>
+                 </div>
+             </div>
          </div>
          <div id="top_bar">
              <div class="top_bar_top">
@@ -1059,6 +1078,7 @@
          var global_price = "All";
 
          var global_time = "All";
+         var global_rating = "All";
 
          function sort_apps() {
              $("#app_list").children().sortDomElements(function(a, b) {
@@ -1106,14 +1126,18 @@
 
          var today = Date.now();
 
-         function evaluate_app(features, price, timestamp) {
+         function evaluate_app(features, price, timestamp, rating) {
              if (global_time != "All") {
                  let dTime = (today / 1000 - timestamp) / (86400); /* 86400 = 60 * 60 * 24 */
                  if (dTime > global_time) {
                      return false;
                  }
              }
-
+             if (global_rating != "All") {
+                 if (rating < global_rating) {
+                     return false;
+                 }
+             }
              if ((global_price == "Free" && price != 0) || (global_price == "Paid" && price == 0)) {
                  return false;
              }
@@ -1150,7 +1174,7 @@
                  k += 1;
                  let removed = false;
 
-                 let good_app = evaluate_app(features, $(this).data("price"), $(this).data("time"));
+                 let good_app = evaluate_app(features, $(this).data("price"), $(this).data("time"), $(this).data("rating"));
 
                  if (!good_app) {
                      document.getElementById("app_list_temp").appendChild($(this).get(0));
@@ -1161,9 +1185,6 @@
                          features_counter[features[j]] += 1;
                      }
                  }
-
-
-
              });
 
              $(".add_remove").each(function(index) {
@@ -1331,6 +1352,9 @@
                  }
                  if ($(this).parent().attr("id") == "filter_time") {
                      global_time = $(this).data("value");
+                 }
+                 if ($(this).parent().attr("id") == "filter_rating") {
+                     global_rating = $(this).data("value");
                  }
 
                  filter_apps();
