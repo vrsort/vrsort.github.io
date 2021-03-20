@@ -1599,6 +1599,7 @@
              global_sortName = $(this).text();
 
              $(this).parent().removeClass("visible");
+             $(this).prev().removeClass("open");
              $("#active_sort_name").text($(this).text());
 
              sort_apps();
