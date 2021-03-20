@@ -1260,8 +1260,7 @@
 
              global_sortName = sort_names[[global_sort, global_sortDir]];
              $("#active_sort_name").text(global_sortName);
-             console.log(sort_names);
-             console.log([global_sort, global_sortDir]);
+
              /* too much copy-paste here better change
                 global_time, global_price etc into an object
                 global['time'] = 'foo'
@@ -1395,7 +1394,6 @@
                  }
              });
 
-             console.log(features_counter);
 
              $(".add_remove").each(function(index) {
                  var filterName = $(this).data("filtername");
@@ -1610,7 +1608,6 @@
              }
 
              filter_apps();
-             console.log("Price Filter", global_price);
          });
 
 
