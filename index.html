@@ -68,6 +68,9 @@
              --color-text-2: rgba(255, 255, 255, .4);
 
              --icons: url(src/icons.svg);
+
+             --shadow-app-hover: 0px 25px 25px 16px black;
+             --image-app-hover-arrow: url(src/app_hover_arrow.svg);
          }
 
 
@@ -91,6 +94,9 @@
              --color-text-2: rgba(0, 0, 0, .4);
 
              --icons: url(src/icons_light.svg);
+
+             --shadow-app-hover: 0px 10px 24px rgba(0, 0, 0, 0.1);
+             --image-app-hover-arrow: url(src/app_hover_arrow_light.svg);
 
          }
 
@@ -159,7 +165,7 @@
              left: 160px;
              top: 50%;
              transform: translateY(-50%);
-             box-shadow: 0px 25px 25px 16px black;
+             box-shadow: var(--shadow-app-hover);
 
              flex-direction: column;
              transform: translateY(-50%) scale(0);
@@ -201,7 +207,7 @@
              position: absolute;
              top: 50%;
              transform: translateY(-50%);
-             background: url(src/app_hover_arrow.svg);
+             background: var(--image-app-hover-arrow);
              width: 8px;
              height: 16px;
              left: -8px;
