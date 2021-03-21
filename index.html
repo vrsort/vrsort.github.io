@@ -728,7 +728,7 @@
              font-size: 13px;
          }
 
-         @media screen and (min-height: 599px) and (max-height: 599px) {
+         /*@media screen and (min-height: 599px) and (max-height: 599px) {
              * {
                  box-sizing: border-box;
              }
@@ -775,11 +775,7 @@
              .add_remove .remove {
                  width: 40px;
                  height: 40px;
-                 background-size: 40px 80px;
-             }
-
-             .add_remove .remove {
-                 background-size: 40px 120px;
+                 background-size: 120px 120px;
              }
 
              .radio_option.active .radio {
@@ -813,7 +809,7 @@
              .app {
                  width: calc(50% - 10px);
              }
-         }
+         }*/
 
          #side_bar_mobile_open {
              width: 60px;
@@ -840,7 +836,11 @@
              }
 
              header {
-                 display: none;
+                 width: calc(100% - 290px);
+                 padding-left: 10px;
+                 height: auto;
+                 padding-right: 10px;
+                 padding-top: 10px;
              }
 
              #lists {
@@ -889,24 +889,32 @@
 
              }
 
+             .radio_option .radio {
+                 background-position: -80px 0;
+             }
+
+             .add_remove .add {
+                 background-position: -40px 0;
+             }
+
              .radio_option.active .radio {
-                 background-position: center top -40px;
+                 background-position: -80px -40px;
              }
 
              .add_remove.active .add {
-                 background-position: center top -40px;
+                 background-position: -40px -40px;
              }
 
              .add_remove.remove .remove {
-                 background-position: center top -80px;
+                 background-position: 0 -80px;
              }
 
              .add_remove .remove:hover {
-                 background-position: center top -40px;
+                 background-position: 0 -40px;
              }
 
              .add_remove.remove:hover .remove {
-                 background-position: center top -80px;
+                 background-position: 0 -80px;
              }
 
              .radio_option,
@@ -935,11 +943,7 @@
              .add_remove .remove {
                  width: 40px;
                  height: 40px;
-                 background-size: 40px 80px;
-             }
-
-             .add_remove .remove {
-                 background-size: 40px 120px;
+                 background-size: 120px 120px;
              }
 
              .filter_name {
@@ -982,9 +986,11 @@
              }
 
 
+
              header {
-                 display: none;
+                 width: 100%;
              }
+
 
              #search_button {
                  display: none;
