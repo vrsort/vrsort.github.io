@@ -15,10 +15,10 @@
     --color-text-1: rgba(255, 255, 255, .6);
     --color-text-2: rgba(255, 255, 255, .4);
 
-    --icons: url(src/icons.svg);
+    --icons: url(icons.svg);
 
     --shadow-app-hover: 0px 25px 25px 16px black;
-    --image-app-hover-arrow: url(src/app_hover_arrow.svg);
+    --image-app-hover-arrow: url(app_hover_arrow.svg);
 }
 
 
@@ -41,10 +41,10 @@
     --color-text-1: rgba(0, 0, 0, .6);
     --color-text-2: rgba(0, 0, 0, .4);
 
-    --icons: url(src/icons_light.svg);
+    --icons: url(icons_light.svg);
 
     --shadow-app-hover: 0px 10px 24px rgba(0, 0, 0, 0.1);
-    --image-app-hover-arrow: url(src/app_hover_arrow_light.svg);
+    --image-app-hover-arrow: url(app_hover_arrow_light.svg);
 
 }
 
@@ -377,7 +377,7 @@ a {
     height: 40px;
     line-height: 40px;
     background-color: var(--color-bg-0);
-    background-image: url(src/search.svg);
+    background-image: url(search.svg);
     background-position: center left 12px;
     background-repeat: no-repeat;
     border: none;
@@ -464,7 +464,7 @@ a {
     width: 30px;
     height: 30px;
     background-image: var(--icons);
-    /*url(src/radio.svg);*/
+    /*url(radio.svg);*/
     background-repeat: no-repeat;
     background-position: -60px 0;
 }
@@ -505,7 +505,7 @@ a {
 
 .add_remove .add {
     background-image: var(--icons);
-    /* url(src/checkbox.svg); */
+    /* url(checkbox.svg); */
     background-repeat: no-repeat;
     background-position: -30px 0px;
 }
@@ -545,7 +545,7 @@ a {
 
 .add_remove .remove {
     background-image: var(--icons);
-    /*url(src/remove.svg);*/
+    /*url(remove.svg);*/
     background-repeat: no-repeat;
     background-position: 0 0;
 }
@@ -641,7 +641,7 @@ header .site_description {
 
 .star {
     background-image: var(--icons);
-    /*url(src/stars.svg);*/
+    /*url(stars.svg);*/
     background-repeat: no-repeat;
     background-position: -39px -72px;
     width: 12px;
@@ -659,7 +659,7 @@ header .site_description {
 .reddit {
     width: 12px;
     height: 12px;
-    background: url(src/reddit.svg) center no-repeat;
+    background: url(reddit.svg) center no-repeat;
     display: block;
     flex-grow: 0;
     flex-shrink: 0;
@@ -772,7 +772,7 @@ footer {
     width: 60px;
     height: 60px;
     background-color: var(--color-remove);
-    background-image: url(src/mobile_filter.svg);
+    background-image: url(mobile_filter.svg);
     background-repeat: no-repeat;
     background-position: center left 0;
     position: absolute;
@@ -1031,7 +1031,7 @@ footer {
     height: 30px;
     background-color: var(--color-bg-3);
     background-image: var(--icons);
-    /*url(src/theme_icons.svg);*/
+    /*url(theme_icons.svg);*/
     background-position: -60px -60px;
     background-repeat: no-repeat;
     cursor: pointer;
