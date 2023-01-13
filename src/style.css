@@ -487,9 +487,11 @@ a {
     display: flex;
     justify-content: space-between;
     font-size: 13px;
+    line-height: 1;
     padding: 0 4px 0 4px;
     cursor: pointer;
     height: 30px;
+    
 }
 
 .add_remove .add,
